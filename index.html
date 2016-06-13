@@ -1,0 +1,127 @@
+<!-- code writen by Avi Tannenbaum 2016. -->
+
+<html>
+
+	<head>
+		<title></title>
+		<script language="javascript" type="text/javascript">
+		
+		
+		
+	
+		
+		/* more head javascript */
+		/* Moved to the functions file of javascript: alert("Welcome to the StarShows Studios Helpdesk Ticketing system by Avi Tannenbaum - Click OK to continue"); */
+		
+		</script>
+		 <link href="style.css" rel="stylesheet" type="text/css">
+		<!== Use the following src es to access varoise functions by Avi Tannenbaum: 
+		functions.js
+		body.js
+		chapter2.js
+		chapter3.js
+		test.js
+		alerts.js
+		objects.js
+		arrays.js
+		advanced.js
+		-->
+		<!-- Use the outside functions javascript file with the following file. -->
+		<script src="arrays.js"> </script>
+	
+	
+		<p> Welcome this is writen in a p tag </p>
+		
+		
+	 </head>
+	
+	<body>
+	
+	<ul>
+	<il><a href="#">Home</a></il>
+	<il><a href="#">Project one</a></il>
+	<il><a href="#">Project two</a></il>
+	
+	</ul>
+	
+	<script>
+	var a = document.getElementByTagName("il");
+	var b = a[2].firstChild;
+	b.innerHTML = "D";
+	</script>
+	
+	<demo>
+	
+	<p>Welcome to Avi's Javascript website </p>
+	<script>
+	var c = document.body.childNodes;
+	var txt = "";
+	for(var k=0; k< c.length; k++) {
+	txt += c[k].nodeType + " ";
+	}
+	document.write(" The entire documents nodeTypes: " + txt);
+	</script>
+	
+	<!-- For optimization purposes please place javascript scripts at boddom of the body so that the wbepage will oad faster -->
+		
+		<script src="body.js"> </script>
+		
+		
+		<!-- begin with the divs -->
+		
+		<div id="header">
+			<img src = "logo.png" />
+			
+		</div>
+		<ul id="nav">
+		<il><a href="index.html"> Home </a></il>
+		<il><a href="a.html"> Projects </a></il>
+		<il><a href="b.html"> Contact </a></il>
+		<il><a href="c.html"> Arrays </a></il>
+		<il><a href="d.html"> Functions </a></il>
+		<il><a href="e.html"> Daniel click here. </a></il>
+		</ul>
+		
+		<script>
+		var list = document.getElementById("nav");
+		var listItem = list.getElementsByTagName("il")[2];
+		list.removeChild(listItem);
+		</script>
+		
+		
+		<button id="demo">
+		Click me
+		</button>
+		
+		<script>
+		
+		
+		var btn = document.getElementById("demo");
+		btn.addEventListner("click",myFunction);
+		btn.document.attachEvent("click", myFunction);
+		
+		function myFunction() {
+		alert(Math.random());
+		btn.removeEventListner("click", myFunction);
+		}
+		
+		var text = '{ " clients" :['+
+		'{ "name":"John","age":"21"},'+
+		'{ "name":"Dave","age":"34"},'+
+		'{ "name":"debby","age":"42"} ]}';
+		
+		
+		//parse from JSOn
+		var obj = JSON.parse(text);
+		
+		var a = obj.clients[0].name; //John
+		var b = obj.clients[1].name // Dave
+		
+		
+		</script>
+		
+		
+		</script>
+	</body>
+	
+</html>
